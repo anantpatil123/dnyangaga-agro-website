@@ -1,0 +1,168 @@
+.hide-on-mobile {
+  display: none;
+}
+
+.show-on-mobile {
+  display: block;
+}
+
+* {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 600;
+}
+
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  font-size: 14px;
+  gap: 0.6rem;
+  font-weight: 300;
+  color: white;
+  margin-right: 10px;
+}
+
+.ion-container-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-icon {
+  margin-right: 5px;
+}
+
+.icon-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block !important;
+  }
+
+  .show-on-mobile {
+    display: none !important;
+  }
+
+  .icon-container {
+    font-size: 14px;
+    gap: 0.6rem;
+  }
+}
+
+.menu-toolbar {
+  min-height: 140px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #F2F1EB;
+  /* Ensure visible under sticky */
+}
+
+.contact-toolbar {
+  padding: 0px
+}
+
+ion-toolbar {
+  --background: #F2F1EB;
+  --color: #282828;
+  padding: 0 16px;
+  align-content: center;
+
+  ion-buttons {
+    flex-wrap: wrap;
+  }
+
+  .contact-header {
+    background-color: #88ab8e;
+    color: #F2F1EB;
+    padding: 0.5rem;
+    font-size: 12px;
+    font-weight: 400;
+
+    ion-col {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    ion-icon {
+      font-size: 18px;
+      color: #F2F1EB;
+    }
+  }
+
+  img {
+    height: 40px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 80px;
+
+    ion-buttons {
+      justify-content: center;
+    }
+
+    img {
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    ion-buttons {
+      justify-content: center;
+      gap: 8px;
+    }
+
+    img {
+      height: 48px;
+    }
+  }
+
+  ion-button {
+    --background: transparent !important;
+    --color: #282828;
+    color: #282828;
+    position: relative;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 1rem 0;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+    }
+
+    &:hover {
+      --color: #c5b290;
+      color: #c5b290;
+
+      &::after {
+        background-color: #c5b290;
+      }
+    }
+
+    &.router-link-active {
+      --color: #c5b290;
+      color: #c5b290;
+
+      &::after {
+        background-color: #c5b290;
+      }
+    }
+  }
+}

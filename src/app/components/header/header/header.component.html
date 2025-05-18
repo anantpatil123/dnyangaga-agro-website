@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-no-padding contact-toolbar">
+    <ion-grid class="ion-no-padding">
+      <ion-row class="contact-header">
+        <ion-col>
+
+        </ion-col>
+        <ion-col class="ion-container-col">
+
+          <ion-row class="icon-container">
+            <a [href]="'mailto:' + email" style="text-decoration: none; ">
+              <ion-icon name="mail"></ion-icon> {{ email }}
+            </a>
+          </ion-row>
+
+          <ion-row class="icon-container">
+            <a [href]="'tel:' + mobileNumber" style="text-decoration: none;">
+              <ion-icon name="call"></ion-icon> {{ mobileNumber }}
+            </a>
+          </ion-row>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+  <ion-toolbar class="menu-toolbar">
+
+    <ion-grid class="ion-no-padding">
+
+      <ion-row class="ion-align-items-center">
+
+        <!-- Logo -->
+        <ion-col size="6" size-md="3">
+          Logo
+          <!-- <img src="assets/logo.png" alt="Logo" style="height: 40px;"> -->
+        </ion-col>
+
+        <!-- Desktop Menu -->
+        <ion-col size="6" size-md="9" class="ion-text-end hide-on-mobile">
+          <ion-buttons>
+            <ion-button routerLink="/home">Home</ion-button>
+            <ion-button routerLink="/about">About</ion-button>
+            <ion-button routerLink="/services">Services</ion-button>
+            <ion-button routerLink="/contact">Contact</ion-button>
+          </ion-buttons>
+        </ion-col>
+
+        <!-- Mobile Menu (Hamburger) -->
+        <ion-col size="6" class="show-on-mobile ion-text-end">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
